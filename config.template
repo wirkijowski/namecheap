@@ -1,5 +1,0 @@
-[DEFAULT]
-url = https://api.namecheap.com/xml.response
-[ACCESS]
-apiuser = foo
-apikey = bar
