@@ -1,4 +1,4 @@
-from ..connection import NamecheapConnection
+from namecheap.connection import NamecheapConnection
 from xml.etree import ElementTree
 
 class Domains(NamecheapConnection):

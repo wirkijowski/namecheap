@@ -1,4 +1,3 @@
-#import configparser
 import urllib.request
 
 
@@ -22,8 +21,7 @@ class NamecheapConnection(object):
 
     def __makerequest__(self, **kw_params):
 
-        parameters = self.parameters
-
+        parameters = self.parameters.copy()
         for key, value in kw_params.items():
             parameters[key] = value
         data = urllib.parse.urlencode(parameters)
@@ -31,5 +29,6 @@ class NamecheapConnection(object):
         req = urllib.request.Request(self.url, data)
         response = urllib.request.urlopen(req)
         recv = response.read()
+        
         return recv.decode('utf-8')
 
